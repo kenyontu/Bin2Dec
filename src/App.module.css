@@ -12,7 +12,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: repeating-linear-gradient(
+  background: linear-gradient(
     45deg,
     var(--color-1),
     var(--color-2),
@@ -106,7 +106,7 @@ main > label {
   align-self: center;
   margin-top: 2.5rem;
   padding: 0.2rem;
-  background: repeating-linear-gradient(
+  background: linear-gradient(
     45deg,
     var(--color-1),
     var(--color-2),
