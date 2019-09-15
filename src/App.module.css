@@ -1,0 +1,129 @@
+.container {
+  --side-padding: 1.8rem;
+  --color-1: #3855a2;
+  --color-2: #842db4;
+  --color-3: #ad2a8a;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-1),
+    var(--color-2),
+    var(--color-3)
+  );
+}
+
+header > h1 {
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 400;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--side-padding) 1rem;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+main > label {
+  align-self: center;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.binaryLabel {
+  margin-top: 2.5rem;
+}
+
+.binaryHelp {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #aaaaaa;
+}
+
+.binaryDigits {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.5rem;
+}
+
+.binaryDigits > div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.binaryDigits button {
+  font-size: 2rem;
+  border: none;
+  background-color: transparent;
+  color: #eee;
+  border-bottom: 3px solid #555;
+  padding: 0.6rem 0;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.binaryDigits button + label {
+  opacity: 0;
+  font-size: 0.9rem;
+  color: #eee;
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.binaryDigits button:hover,
+.binaryDigits button:focus {
+  border-bottom: 3px solid var(--color-2);
+  background-color: #333;
+}
+
+.binaryDigits button:hover + label,
+.binaryDigits button:focus + label {
+  opacity: 1;
+}
+
+.decimalLabel {
+  margin-top: 3.5rem;
+}
+
+.decimal {
+  align-self: center;
+  margin-top: 2.5rem;
+  padding: 0.2rem;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-1),
+    var(--color-2),
+    var(--color-3)
+  );
+}
+
+.decimal p {
+  font-size: 2rem;
+  padding: 0.3rem 1.2rem;
+  color: white;
+  background-color: var(--background-color);
+}
+
+@media screen and (min-width: 500px) {
+  main {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
